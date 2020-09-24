@@ -1,0 +1,66 @@
+---
+---
+
+.hero__container {
+  max-width: 1080px;
+}
+
+.hero__heading:before {
+  @media (min-width: 768px) {
+    left: 50%;
+    transform: translate(-200px, 0px);
+  }
+}
+
+.main__block.impact {
+  background: white;
+  color: black;
+  @media (min-width: 768px) {
+    padding: 50px 20px;
+  }
+  @media (min-width: 1024px) {
+    padding: 130px 20px;
+    margin-bottom: 0px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    align-items: center;
+    gap: 0px;
+    @media (min-width: 768px) {
+      gap: 100px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1024px) {
+      max-width: 850px;
+    }
+    @media (min-width: 1280px) {
+      max-width: 1030px;
+    }
+  }
+  .impact__heading {
+    max-width: 530px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .impact__copy {
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.main__block.pledge {
+  padding-top: 32px;
+  @media (min-width: 768px) {
+    padding-top: 130px;
+  }
+  @media (min-width: 1024px) {
+    padding-top: 160px;
+  }
+}
