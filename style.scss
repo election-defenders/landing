@@ -56,11 +56,72 @@
 }
 
 .main__block.pledge {
-  padding-top: 32px;
+  padding-top: 80px;
   @media (min-width: 768px) {
     padding-top: 130px;
   }
   @media (min-width: 1024px) {
     padding-top: 160px;
+  }
+}
+
+.can_embed #can_embed_form {
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.hamburger {
+  display: none !important;
+}
+
+body .can_embed {
+  #can_embed_form input[type=text], #can_embed_form input[type=password], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number] {
+    background: black !important;
+    color: white !important;
+    border: 3px solid #f2f2f2 !important;
+    font-family: ff-real-headline-pro,sans-serif !important;
+    &::placeholder {
+      color: #7c7a7d !important;
+      opacity: 1;
+    }
+  }
+
+  #can_embed_form .check_radio_field label, #mobile_opt_in_default {
+    color: white !important;
+    text-transform: capitalize;
+  }
+
+  #can_embed_form form li.control-group, #can_embed_form form li.core_field {
+    margin-bottom: 9px !important;
+  }
+  #can_embed_form .floatlabel-wrapper .floatlabel-label-active, 
+  #can_embed_form .floatlabel-wrapper .floatlabel-label,
+  #can_embed_form .can_thank_you-block:first-child>label.graytext {
+    display: block !important;
+    opacity: 1 !important;
+    top: -17px!important;
+    left: -3px !important;
+    text-transform: uppercase !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 10px !important;
+    font-family: ff-real-headline-pro,sans-serif !important;
+    &:after {
+      background-color: transparent !important;
+    }
+  }
+  #can_embed_form .floatlabel-wrapper .floatlabel-label-active {
+    &:after {
+      color: #d2a5ff !important;
+    }
+  }
+  
+
+  #can_embed_form #can_thank_you {
+    background-color: #5ff180 !important;
+  }
+
+  #can_embed_form #can_thank_you #action_thank_you_text a {
+    color: #ffbb3b!important;
   }
 }

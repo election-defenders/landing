@@ -27,12 +27,10 @@
       <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="https://thefrontline.org/wp-content/uploads/Frontline-Meta-1.png" />
-      <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thefrontline.org/#website","url":"https://thefrontline.org/","name":"The Frontline","description":"In the biggest movement in history, it&#039;s going to take all of us.","potentialAction":[{"@type":"SearchAction","target":"https://thefrontline.org/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://thefrontline.org/#webpage","url":"https://thefrontline.org/","name":"The Frontline | In the biggest movement in history, it&#039;s going to take all of us.","isPartOf":{"@id":"https://thefrontline.org/#website"},"datePublished":"2020-08-22T01:42:10+00:00","dateModified":"2020-09-18T14:46:50+00:00","description":"What is impossible to do alone, we can do together. Take the pledge and join us.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://thefrontline.org/"]}]}]}</script>
       <!-- / Yoast SEO plugin. -->
       <link rel='dns-prefetch' href='//s.w.org' />
       <link rel='stylesheet' id='wp-block-library-css'  href='https://thefrontline.org/wp-includes/css/dist/block-library/style.min.css?ver=5.5.1' type='text/css' media='all' />
       <link rel='stylesheet' id='main-styles-css'  href='https://thefrontline.org/wp-content/themes/frontline/style.min.css?ver=1.1.3' type='text/css' media='all' />
-      <script type='text/javascript' src='https://thefrontline.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
       <script type='text/javascript' src='https://thefrontline.org/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.5' id='gtm4wp-form-move-tracker-js'></script>
       <link rel="https://api.w.org/" href="https://thefrontline.org/wp-json/" />
       <link rel="alternate" type="application/json" href="https://thefrontline.org/wp-json/wp/v2/pages/2" />
@@ -60,7 +58,6 @@
       <link rel="apple-touch-icon" sizes="180x180" href="https://thefrontline.org/wp-content/themes/frontline/assets/img/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="https://thefrontline.org/wp-content/themes/frontline/assets/img/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="https://thefrontline.org/wp-content/themes/frontline/assets/img/favicon-16x16.png">
-      <link rel="manifest" href="https://thefrontline.org/site.webmanifest">
       <link rel="mask-icon" href="https://thefrontline.org/wp-content/themes/frontline/assets/img/safari-pinned-tab.svg" color="#5bbad5">
       <link rel="icon" type="image/png" href="https://thefrontline.org/wp-content/uploads/favicon.ico" />
       <meta name="msapplication-TileColor" content="#da532c">
@@ -110,7 +107,7 @@
             <div class="hero__container">
                <span class="hero__brow">In the fight for the future of our country</span>
                <h2 class="hero__heading">Join the FRONTLINE <span>ELECTION DEFENDERS</span></h2>
-               <button class="btn btn--orange hero__btn">Sign the Pledge</button>
+               <a class="btn btn--orange hero__btn" href="#pledge">Sign the Pledge</a>
             </div>
             <div class="hero__pledge">
                <script src='https://actionnetwork.org/widgets/v3/form/ready-to-take-the-pledge?format=js&source=widget&clear_id=true'></script>
@@ -129,7 +126,7 @@
             </div>
          </div>
 
-         <div class="main__block pledge">
+         <div class="main__block pledge" id="pledge">
 
             <div class="pledge__container">
                <div class="pledge__col pledge__col--50">
@@ -137,6 +134,8 @@
                </div>
                <div class="pledge__col pledge__col--50">
                   <div class="pledge__form">
+                    <!-- Jquery -->
+                    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
                     <link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/widgets/v3/form/election-defense-pledge?format=js&source=widget'></script><div id='can-form-area-election-defense-pledge' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
                   </div>
                </div>
@@ -168,204 +167,5 @@
             </div>
          </div>
       </footer>
-      <script type='text/javascript' src='https://thefrontline.org/wp-content/themes/frontline/assets/js/vendor.min.js?ver=1.1.3' id='vendor-js'></script>
-      <script type='text/javascript' src='https://thefrontline.org/wp-content/themes/frontline/assets/js/custom.min.js?ver=1.1.3' id='custom-js'></script>
-      <script type='text/javascript' src='https://thefrontline.org/wp-includes/js/wp-embed.min.js?ver=5.5.1' id='wp-embed-js'></script>
-      <script>
-         $(document).ready(function() {
-             $(document).on('can_embed_loaded', function() {
-                 $('#can-form-area-ready-to-take-the-pledge, .buttons').fadeIn(1000);
-                 $('#form_col2 input[type="submit"]').hide();
-                 $('li').remove('.form_builder_output');
-                 $('span').remove('.international_link-wrap');
-                 $('span').remove('.country_drop_wrap');
-                 $('div').remove('.action_owner');
-         
-                 $('#form_col1 > *').each(function(eq, el) {
-                     el = $(el);
-                     if(typeof(el.attr('id')) === "undefined") {
-                         el.attr('id', 'field-' + eq);
-                     }
-                 });
-         
-                 $('#field-0, #field-1, #field-2, #field-3, #field-4').wrapAll('<div id="field-group-1" />');
-                 $('#field-5').wrapAll('<div id="field-group-2" />');
-                 $('#field-6, #field-7, #field-8, #field-9, #field-10').wrapAll('<div id="field-group-3" />');
-         
-                 $('<div id="field-content-1"><h5>What is impossible to do alone, we can do together</h5></div>').insertBefore('#field-0');
-                 $('<div id="field-content-2"><h5>Now, tell us where you live:</h5></div>').insertBefore('#field-5');
-                 $('<div class="buttons"><div id="form_col1-pagination"><a id="form_col1-previous" href="#" class="">&lt;&lt; Back</a><a id="form_col1-next" href="#">Next &gt;&gt;</a></div></div>').insertBefore('#form_col2 > img');
-         
-                 $('<span></span>').insertAfter('input[type="checkbox"]');
-         
-                 $('div[id^="field-content-"]').fadeIn(0);
-         
-                 jQuery(document).on('change', 'input[type="checkbox"]', function(){
-                     jQuery(this).parent().toggleClass('selected');
-                 })
-             });
-         });
-         
-         $(document).ready(function() {
-             $(document).on('can_embed_loaded', function() {
-                 (function($) {
-                     $.fn.paginate = function(options) {
-         
-                         var pageObj = $('#form_col1 > *'),
-                         progressFill = $('.progress-meter-fill');
-         
-                         var Paginator = function(self, options) {
-         
-                             var defaults = {
-                                 itemsPerPage: 10,
-                                 selector: {
-                                     next: self.selector+'-next',
-                                     previous: self.selector+'-previous',
-                                     pagination: self.selector+'-pagination'
-                                 },
-                                 cssClassName: {
-                                     disabled: 'disabled'
-                                 }
-                             };
-                             var options = $.extend(defaults, options);
-                             var currentPage = 1;
-                             var numberOfPages = 1;
-                             var numberOfItems = 0;
-         
-                             var init = function() {
-                                 numberOfItems = self.children().size();
-                                 numberOfPages = Math.ceil(numberOfItems / options.itemsPerPage);
-         
-                                 pageCount = pageObj.length;
-                                 meterBar = 1 / pageCount;
-                                 start = meterBar * 100;
-                                 progressFill.css({'width': start + '%'});
-         
-                                 // Add validation container
-                                 pageObj.each(function(i){
-                                 $(this).addClass('validation-group-' + (i + 1));
-                                 });
-         
-                                 if (numberOfPages > 1) {
-                                     $(options.selector.pagination).show();
-                                     $(options.selector.previous).addClass(options.cssClassName.disabled);
-                                 }
-         
-                                 self.children().hide();
-                                 self.children().slice(0, options.itemsPerPage).show();
-         
-                                 $(options.selector.previous).click(function(e){
-                                     e.preventDefault();
-                                     previous();
-                                     submit();
-                                     meter();
-                                     scrollUp();
-                                 });
-                                 $(options.selector.next).click(function(e){
-                                     e.preventDefault();
-                                     // Check required fields in current validation container...
-                                     var valid = true;
-                                     $('.validation-group-' + currentPage).find('input').each(function(i){
-                                     if (!$(this)[0].checkValidity()) {
-                                         $(this).addClass('ms-required');
-                                         $(this).parent().append('<span class="error">↑ Required');
-                                         valid = false;
-                                     }
-                                     });
-                                     if (valid) {
-                                     next();
-                                     submit();
-                                     meter();
-                                     }
-                                     scrollUp();
-                                 });
-         
-                                 self.show();
-                             }
-         
-                             var show = function(page) {
-                                 currentPage = page;
-                                 startPage = (currentPage - 1) * options.itemsPerPage;
-                                 endPage = startPage + options.itemsPerPage;
-                                 self.children().hide().slice(startPage, endPage).show();
-         
-                                 var disabled = options.cssClassName.disabled;
-                                 $(options.selector.pagination + ' a').removeClass(disabled);
-                                 if (currentPage <= 1) {
-                                     $(options.selector.previous).addClass(disabled);
-                                 } else if (currentPage == numberOfPages) {
-                                     $(options.selector.next).addClass(disabled);
-                                 }
-                             };
-         
-                             var next = function() {
-                                 if (currentPage < numberOfPages){
-                                     show(currentPage + 1);
-                                 }
-                             };
-         
-                             var previous = function() {
-                                 if (currentPage > 1) {
-                                     show(currentPage - 1);
-                                 }
-                             };
-         
-                             var meter = function() {
-                                 pageCount = pageObj.length;
-                                 progress = currentPage / pageCount;
-                                 fill = progress * 100;
-         
-                                 progressFill.css({'width': fill + '%'});
-                             };
-         
-                             var submit = function() {
-                                 if (currentPage < numberOfPages){
-                                     $('#form_col2 > input[type="submit"]').css('display', 'none');
-                                 }
-                                 if (currentPage == numberOfPages){
-                                     $('#form_col2 > input[type="submit"]').css('display', 'flex');
-                                 }
-                             }
-         
-                             // Return to top of form
-                             var scrollUp = function() {
-                             $('html, body').animate({
-                                 scrollTop: $(".hero").offset().top
-                             }, 300);
-                             }
-         
-                             init();
-                             return this;
-                         }
-         
-                         return new Paginator(this, options);
-                     };
-                 })(jQuery);
-         
-                 var field = $('div[id^="field-group-"]');
-         
-                 $('#form_col1').paginate({
-                     itemsPerPage: 1
-                 });
-         
-                 $('input:radio').change(function(){
-                     if($(this).is(":checked")) {
-                         $(this).parent().toggleClass('selected');
-                         $(this).parent().siblings().removeClass('selected');
-                     }
-                 });
-             });
-         
-             $(document).on('can_embed_submitted', function() {
-                 scrollUp();
-         
-                 var scrollUp = function() {
-                     $('html, body').animate({
-                         scrollTop: $(".hero").offset().top
-                     }, 300);
-                 }
-             });
-         });
-      </script>
    </body>
 </html>
