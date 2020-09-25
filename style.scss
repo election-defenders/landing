@@ -337,7 +337,8 @@ body.firefox {
   }
 }
 
-form#can_embed_form {
+form#can_embed_form,
+.pledge__col.pledge__col--50 {
   overflow: hidden;
 }
 body {
