@@ -23,7 +23,7 @@
 
 .main__block.impact {
   background: white;
-  color: black;
+  color: #07040a;
   @media (min-width: 768px) {
     padding: 50px 20px;
   }
@@ -173,7 +173,7 @@
 
 
 .can_embed #can_embed_form {
-  background: black !important
+  background: #07040a !important
 }
 #action_welcome_message_inner {
   color: white;
@@ -224,7 +224,7 @@
 }
 
 select.required.can_select.js-form-country.hasCustomSelect {
-  color: black;
+  color: #07040a;
 }
 
 label.checkbox {
@@ -232,7 +232,7 @@ label.checkbox {
 }
 
 #mobile_opt_in {
-  background: black;
+  background: #07040a;
 }
 #mobile_opt_in label input[type="checkbox"] {
   display: block;
@@ -277,18 +277,22 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   text-transform: uppercase !important;
 }
 
-#form_col2 input[type="submit"]::before {
-  content: "";
-  background-image: url("assets/img/marker-orange.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 309px;
-  height: 110px;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  -webkit-transition: all .35s;
-  transition: all .35s;  
+#form_col2 input[type="submit"] {
+  float: none !important;
+  position: relative;
+  &::before {
+    // content: "";
+    // background-image: url("https://thefrontline.org/wp-content/themes/frontline/assets/img/marker-orange.svg");
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // width: 309px;
+    // height: 110px;
+    // position: absolute;
+    // top: 65%;
+    // left: 50%;
+    // -webkit-transform: translate(-50%,-50%);
+    // transform: translate(-50%,-50%);
+    // -webkit-transition: all .35s;
+    // transition: all .35s;  
+  }
 }
