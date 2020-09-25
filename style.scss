@@ -224,7 +224,8 @@
   }
 }
 
-select.js-form-country {
+select.js-form-country,
+span.country_drop_wrap {
   max-width: calc(100% - 40px) !important; 
 }
 select.required.can_select.js-form-country.hasCustomSelect {
