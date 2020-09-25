@@ -312,3 +312,20 @@ body.firefox {
     bottom: -210px;
   }
 }
+
+.core_field:nth-child(2),
+.core_field:nth-child(3),
+.core_field:nth-child(5),
+.core_field:nth-child(6) {
+  display: inline-block;
+  width: calc(50% - 2px);
+}
+
+#can_embed_form .check_radio_field label {
+  font-size: 12px;
+  input {
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+  }
+}
