@@ -12,6 +12,15 @@
   }
 }
 
+.header__logo {
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+  img {
+    width: 170px;
+  }
+}
+
 .main__block.impact {
   background: white;
   color: black;
