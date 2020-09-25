@@ -279,6 +279,7 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
 
 #form_col2 input[type="submit"] {
   float: none !important;
+  margin-top: 20px !important;
   position: relative;
   &::before {
     // content: "";
@@ -295,4 +296,13 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
     // -webkit-transition: all .35s;
     // transition: all .35s;  
   }
+}
+
+
+span.country_drop_wrap.js-country_drop_wrap.hide.clear {
+  margin-bottom: 20px;
+}
+
+#mobile_opt_in {
+  padding: 0;
 }
