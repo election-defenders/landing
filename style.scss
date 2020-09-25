@@ -224,13 +224,10 @@
   }
 }
 
-select.js-form-country,
-span.country_drop_wrap {
-  max-width: calc(100% - 40px) !important; 
-}
+
 select.required.can_select.js-form-country.hasCustomSelect {
   color: #07040a;
-  max-width: calc(100% - 40px) !important;
+  //max-width: calc(100% - 40px) !important;
 }
 
 label.checkbox {
@@ -336,4 +333,9 @@ body.firefox {
     position: relative;
     top: 2px;
   }
+}
+
+.pledge__form {
+  overflow: hidden !important;
+  max-width: 100%;
 }
