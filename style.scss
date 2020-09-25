@@ -286,21 +286,6 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   margin-top: 20px !important;
   position: relative;
   border-radius: 0 !important;
-  &::before {
-    // content: "";
-    // background-image: url("https://thefrontline.org/wp-content/themes/frontline/assets/img/marker-orange.svg");
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // width: 309px;
-    // height: 110px;
-    // position: absolute;
-    // top: 65%;
-    // left: 50%;
-    // -webkit-transform: translate(-50%,-50%);
-    // transform: translate(-50%,-50%);
-    // -webkit-transition: all .35s;
-    // transition: all .35s;  
-  }
 }
 
 
@@ -335,7 +320,13 @@ body.firefox {
   }
 }
 
-.pledge__form {
+body, html{
+  overflow-x: hidden;
+}
+
+.pledge__form,
+.main__block.pledge {
   overflow: hidden !important;
   max-width: 100%;
 }
+
