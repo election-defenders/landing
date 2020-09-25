@@ -276,3 +276,19 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   margin-bottom: 0px;
   text-transform: uppercase !important;
 }
+
+#form_col2 input[type="submit"]::before {
+  content: "";
+  background-image: url("assets/img/marker-orange.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 309px;
+  height: 110px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: all .35s;
+  transition: all .35s;  
+}
