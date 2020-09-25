@@ -282,6 +282,7 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   text-transform: uppercase !important;
 }
 
+
 #form_col2 input[type="submit"] {
   float: none !important;
   margin-top: 20px !important;
@@ -336,6 +337,9 @@ body.firefox {
   }
 }
 
+form#can_embed_form {
+  overflow: hidden;
+}
 body {
   overflow-x: hidden;
 }
