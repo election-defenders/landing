@@ -164,7 +164,10 @@
 
 
 .can_embed #can_embed_form {
-  background: #262626 !important
+  background: black !important
+}
+#action_welcome_message_inner {
+  color: white;
 }
 
 #form_col1-pagination input[type="submit"], #form_col2 input[type="submit"] {
@@ -193,6 +196,7 @@
   .can_selectInner {
     position: relative;
     pointer-events: none;
+    width: 100% !important;
     &::after {
       background-image: url(https://static.casablue.co/mijente/images/keyboard_arrow_down-24px-white.svg?123);
       background-repeat: no-repeat;
@@ -231,6 +235,24 @@ label.checkbox {
   cursor: pointer;
 }
 
-.can_thank_you-block:nth-child(2) {
+.can_thank_you-block:nth-child(2), .can_thank_you-block:nth-child(3) {
   display: none;
+}
+
+.can_embed #can_embed_form #can_thank_you h1 {
+  color: white !important;
+  margin-bottom: -50px;
+}
+
+a.share_button.share-facebook.left.mr15.js-facebook_link {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  color: #5ff180;
+}
+a.share_button.share-twitter.left.mr15.js-twitter_link {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  color: #5fc9f1;
 }
