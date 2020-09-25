@@ -226,6 +226,7 @@
 
 select.required.can_select.js-form-country.hasCustomSelect {
   color: #07040a;
+  max-width: calc(100% - 40px) !important;
 }
 
 label.checkbox {
