@@ -306,3 +306,9 @@ span.country_drop_wrap.js-country_drop_wrap.hide.clear {
 #mobile_opt_in {
   padding: 0;
 }
+
+body.firefox {
+  .pledge__heading span::after {
+    bottom: -210px;
+  }
+}
