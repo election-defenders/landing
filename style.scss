@@ -189,6 +189,7 @@
 #can_embed_form input[type=text], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number] {
   color: white;
   border-color: white;
+  border-radius: 0 !important;
   &::placeholder {
     color: white;
   }
@@ -281,6 +282,7 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   float: none !important;
   margin-top: 20px !important;
   position: relative;
+  border-radius: 0 !important;
   &::before {
     // content: "";
     // background-image: url("https://thefrontline.org/wp-content/themes/frontline/assets/img/marker-orange.svg");
