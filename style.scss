@@ -65,63 +65,172 @@
   }
 }
 
-.can_embed #can_embed_form {
-  border: 0 !important;
-  padding: 0 !important;
-}
-
 .hamburger {
   display: none !important;
 }
 
-body .can_embed {
-  #can_embed_form input[type=text], #can_embed_form input[type=password], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number] {
-    background: black !important;
-    color: white !important;
-    border: 3px solid #f2f2f2 !important;
-    font-family: ff-real-headline-pro,sans-serif !important;
-    &::placeholder {
-      color: #7c7a7d !important;
-      opacity: 1;
-    }
-  }
+// .can_embed #can_embed_form {
+//   border: 0 !important;
+//   padding: 0 !important;
+// }
 
-  #can_embed_form .check_radio_field label, #mobile_opt_in_default {
-    color: white !important;
-    text-transform: capitalize;
-  }
+// body .can_embed {
+//   #can_embed_form input[type=text], #can_embed_form input[type=password], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number] {
+//     background: black !important;
+//     color: white !important;
+//     border: 3px solid #f2f2f2 !important;
+//     font-family: ff-real-headline-pro,sans-serif !important;
+//     &::placeholder {
+//       color: #7c7a7d !important;
+//       opacity: 1;
+//     }
+//   }
 
-  #can_embed_form form li.control-group, #can_embed_form form li.core_field {
-    margin-bottom: 9px !important;
-  }
-  #can_embed_form .floatlabel-wrapper .floatlabel-label-active, 
-  #can_embed_form .floatlabel-wrapper .floatlabel-label,
-  #can_embed_form .can_thank_you-block:first-child>label.graytext {
-    display: block !important;
-    opacity: 1 !important;
-    top: -17px!important;
-    left: -3px !important;
-    text-transform: uppercase !important;
-    color: white !important;
-    font-weight: 600 !important;
-    font-size: 10px !important;
-    font-family: ff-real-headline-pro,sans-serif !important;
-    &:after {
-      background-color: transparent !important;
-    }
-  }
-  #can_embed_form .floatlabel-wrapper .floatlabel-label-active {
-    &:after {
-      color: #d2a5ff !important;
-    }
-  }
+//   #can_embed_form .check_radio_field label, #mobile_opt_in_default {
+//     color: white !important;
+//     text-transform: capitalize;
+//   }
+
+//   #can_embed_form form li.control-group, #can_embed_form form li.core_field {
+//     margin-bottom: 9px !important;
+//   }
+//   #can_embed_form .floatlabel-wrapper .floatlabel-label-active, 
+//   #can_embed_form .floatlabel-wrapper .floatlabel-label,
+//   #can_embed_form .can_thank_you-block:first-child>label.graytext {
+//     display: block !important;
+//     opacity: 1 !important;
+//     top: -17px!important;
+//     left: -3px !important;
+//     text-transform: uppercase !important;
+//     color: white !important;
+//     font-weight: 600 !important;
+//     font-size: 10px !important;
+//     font-family: ff-real-headline-pro,sans-serif !important;
+//     &:after {
+//       background-color: transparent !important;
+//     }
+//   }
+//   #can_embed_form .floatlabel-wrapper .floatlabel-label-active {
+//     &:after {
+//       color: #d2a5ff !important;
+//     }
+//   }
   
 
-  #can_embed_form #can_thank_you {
-    background-color: #5ff180 !important;
-  }
+//   #can_embed_form #can_thank_you {
+//     h1 {
+//       color: white !important;
+//     }
+//   }
 
-  #can_embed_form #can_thank_you #action_thank_you_text a {
-    color: #ffbb3b!important;
+//   #can_embed_form #can_thank_you #action_thank_you_text a {
+//     color: #ffbb3b!important;
+//   }
+
+//   #can_embed_form label.check_radio_label {
+//     display: block !important;
+//     opacity: 1 !important;
+//     top: -9px!important;
+//     left: 0px !important;
+//     text-transform: uppercase !important;
+//     color: white !important;
+//     font-weight: 600 !important;
+//     font-size: 10px !important;
+//     font-family: ff-real-headline-pro,sans-serif !important;
+//   }
+//   // #can_embed_form .control-group.checkbox_group_wrap:first-of-type {
+//   //   z-index: 10 !important;
+//   //   margin-bottom: 40px !important;
+//   //   .check_radio_field {
+//   //     position: absolute !important;
+//   //     z-index: 13 !important;
+//   //     background-color: red !important;
+//   //     border: 2px solid white !important;
+//   //     left: -1px !important;
+//   //     top: 5px !important;
+//   //     width: 100%;
+//   //     box-sizing: border-box;
+//   //     padding-left: 10px !important;
+//   //     display: block !important;
+//   //   }
+//   // }
+//   #can_embed_form .check_radio_field {
+//     margin-top: -10px !important;
+//     border: 3px solid white !important;
+//     padding: 9px 16px !important;
+//     width: 100% !important;
+//   }
+// }
+
+
+.can_embed #can_embed_form {
+  background: #262626 !important
+}
+
+#form_col1-pagination input[type="submit"], #form_col2 input[type="submit"] {
+  display: block !important;
+}
+
+.pledge__form label {
+  color: white;
+}
+#can_embed_form input[type=text], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number] {
+  color: white;
+  border-color: white;
+  &::placeholder {
+    color: white;
   }
+}
+.floatlabel-label-active, .floatlabel-label-focus {
+  color: #d2a5ff !important;
+}
+
+.can_select.required.js-form-country {
+  border: 3px solid white;
+  width: 100%;
+  color: white;
+  padding: 6px 10px;
+  .can_selectInner {
+    position: relative;
+    pointer-events: none;
+    &::after {
+      background-image: url(https://static.casablue.co/mijente/images/keyboard_arrow_down-24px-white.svg?123);
+      background-repeat: no-repeat;
+      background-position: right;
+      display: block;
+      position: absolute;
+      content: '';
+      height: 24px;
+      width: 24px;
+      right: 6px;
+      top: calc(50% - 11px);
+      transition: all 0.2s ease-in-out;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+select.required.can_select.js-form-country.hasCustomSelect {
+  color: black;
+}
+
+label.checkbox {
+  display: inline-block;
+}
+
+#mobile_opt_in {
+  background: black;
+}
+#mobile_opt_in label input[type="checkbox"] {
+  display: block;
+  margin-right: 10px;
+}
+
+.international_link-wrap.js-international_link-wrap.mb10 {
+  color: #ffbb3b  !important;
+  cursor: pointer;
+}
+
+.can_thank_you-block:nth-child(2) {
+  display: none;
 }
