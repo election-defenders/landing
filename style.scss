@@ -233,6 +233,11 @@ label.checkbox {
 .international_link-wrap.js-international_link-wrap.mb10 {
   color: #ffbb3b  !important;
   cursor: pointer;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  font-family: ff-real-headline-pro,sans-serif;
+  font-weight: 900;
+  letter-spacing: .02em;
 }
 
 .can_thank_you-block:nth-child(2), .can_thank_you-block:nth-child(3) {
@@ -255,4 +260,10 @@ a.share_button.share-twitter.left.mr15.js-twitter_link {
   width: 49%;
   text-align: center;
   color: #5fc9f1;
+}
+
+#can_embed_form label.check_radio_label {
+  font-size: 10px !important;
+  margin-bottom: 0px;
+  text-transform: uppercase !important;
 }
