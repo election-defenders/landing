@@ -1,3 +1,11 @@
+---
+---
+
+{% assign min = 10000 %}
+{% assign max = 99999 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -63,7 +71,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="https://thefrontline.org/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?{{ randomNumber }}">
   </head>
   <body class="home page-template page-template-page-home page-template-page-home-php page page-id-2 login--false">
       <!-- Google Tag Manager (noscript) -->
