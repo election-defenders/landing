@@ -132,8 +132,53 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
                   <div class="pledge__form">
                     <!-- Jquery -->
                     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
                     <!-- <link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /> -->
-                    <script src='https://actionnetwork.org/widgets/v3/form/election-defense-pledge?format=js&source=widget'></script><div id='can-form-area-election-defense-pledge' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
+                    <script src='https://actionnetwork.org/widgets/v3/form/election-defense-pledge?format=js&source=widget'></script>
+                    <div id='can-form-area-election-defense-pledge' style='width: 100%'>
+                      <!-- this div is the target for our HTML insertion -->
+                    </div>
+                    
+                    <script>
+                      var end = false;
+                      (function(){
+                          if ($('input[name="Race_Black"]').length ) {
+                            let selectBox = $('input[name="Race_Black"]').parent().parent();
+                            let dropdown = selectBox.parent();
+                            selectBox.slideUp(1);
+                            dropdownInit(dropdown, selectBox);
+                            end = true;
+                          }
+                          if (end === false) {
+                            setTimeout(arguments.callee, 1000);
+                          }
+                      })();
+                      function dropdownInit(element, box) {
+                        console.log(element);
+                        element.addClass('cb-dropdown');
+                        let selectorElementString = "<div class='select-race'>Select Race(s)</div>";
+                        element.append(selectorElementString);
+
+                        $('.select-race').on('click', function() {
+                          $(box).slideToggle();
+                        });
+                        $('.cb-dropdown label.checkbox').on('click', function(e) {
+                          console.log('here');
+                          var racesCount = 0;
+                          $('.cb-dropdown .checkbox input').each(function() {
+                            if ($(this).is(":checked")) {
+                              racesCount += 1;
+                            };
+                          });
+                          console.log(racesCount);
+                          if (racesCount > 0) {
+                            $('.select-race').text(racesCount + ' selected');
+                          } else {
+                            $('.select-race').text('Select Race(s)');
+                          }
+                        });
+                      }
+                    </script>
                   </div>
                </div>
             </div>
@@ -156,6 +201,9 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
     if (navigator.userAgent.indexOf("Firefox") != -1) {
       $('body').addClass('firefox');
     }
+    $('body #can_embed_form label.check_radio_label').on('click', function() {
+      console.log('here');
+    });
   </script>
    </body>
 </html>

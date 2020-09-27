@@ -257,12 +257,24 @@ body, html{
   line-height: inherit;
 }
 
+
+// Fixing country selector 
+.block.relative {
+  position: relative;
+}
+.required.can_select.js-form-country.hasCustomSelect {
+  top: 26px;
+  left: -78px;
+}
+
 // Dropdown
 .pledge__form {
+  height: 720px;
   @media (min-width: 768px) {
     height: 740px;
   }
 }
+
 body .cb-dropdown {
   position: relative;
   .controls.check_radio_field {
