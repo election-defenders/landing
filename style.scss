@@ -262,9 +262,23 @@ body, html{
 .block.relative {
   position: relative;
 }
+
+
 .required.can_select.js-form-country.hasCustomSelect {
   top: 26px;
   left: -78px;
+}
+
+.country_drop_wrap.js-country_drop_wrap.hide.clear {
+  display: block !important;
+  //.can_select.required.js-form-country {
+  //  display: none !important;
+  //}
+  .required.can_select.js-form-country.hasCustomSelect {
+    left: 0px;
+    top: -15px;
+    // display: block !important;
+  }
 }
 
 // Dropdown
@@ -310,9 +324,14 @@ body .cb-dropdown {
     content: '';
     height: 24px;
     width: 24px;
-    right: 6px;
+    right: 14px;
     top: calc(50% - 11px);
     transition: all 0.2s ease-in-out;
     transform: rotate(0deg);
+  }
+}
+.select-race.open {
+  &::after {
+    transform: rotate(180deg);
   }
 }

@@ -161,6 +161,7 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
 
                         $('.select-race').on('click', function() {
                           $(box).slideToggle();
+                          $('.select-race').toggleClass('open');
                         });
                         $('.cb-dropdown label.checkbox').on('click', function(e) {
                           console.log('here');
@@ -176,6 +177,13 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
                           } else {
                             $('.select-race').text('Select Race(s)');
                           }
+                        });
+
+                        // Country selector fixes
+                        $('.can_select.required.js-form-country').slideUp(1);
+                        $('.international_link.js-international_link').on('click', function() {
+                          $('.required.can_select.js-form-country.hasCustomSelect').slideDown();
+                          $('.can_select.required.js-form-country').slideDown();
                         });
                       }
                     </script>
