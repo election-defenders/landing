@@ -1,0 +1,116 @@
+<form class="cb-form">
+  <div class="grid-2">
+    <div>
+      <label>First Name </label>
+      <input type="text" class="cb-input" placeholder="First Name" name="answer[first_name]">
+    </div>
+    <div>
+      <label>Last Name </label>
+      <input type="text" class="cb-input" placeholder="Last Name" name="answer[last_name]">
+    </div>
+  </div>
+
+  <div>
+    <label>Email* </label>
+    <input type="email" class="cb-input" placeholder="your@email.com" name="answer[email]">
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <label>Mobile Number</label>
+      <input type="email" class="cb-input" placeholder="Mobile Number" name="answer[phone]">
+    </div>
+
+    <div>
+      <label>ZIP/POSTAL CODE *</label>
+      <input type="email" class="cb-input" placeholder="Zip/Postal Code *" name="answer[zip_code]">
+    </div>
+  </div>
+
+  <div>
+    <label>Race</label>
+    <div class="dropdown-container">
+      <div class="select-race">
+        Select Race(s)
+      </div>
+      <div class="dropdown">
+        <label class="checkbox">
+          <input type="checkbox" name="Race_Black" value="1" class=" checkbox_group" data-always="false">
+          Black
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="Race_Afro-Latinx" value="1" class=" checkbox_group" data-always="false">
+          Afro-Latinx
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="Race_Latinx" value="1" class=" checkbox_group" data-always="false">
+          Latinx
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Asian" value="1" class=" checkbox_group" data-always="false">
+        Asian
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_South Asian" value="1" class=" checkbox_group" data-always="false">
+        South Asian
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Pacific Islander" value="1" class=" checkbox_group" data-always="false">
+        Pacific Islander
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Middle Eastern" value="1" class=" checkbox_group" data-always="false">
+        Middle Eastern
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Afro-Caribbean" value="1" class=" checkbox_group" data-always="false">
+        Afro-Caribbean
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Afro-Native" value="1" class=" checkbox_group" data-always="false">
+        Afro-Native
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Afro-Asian" value="1" class=" checkbox_group" data-always="false">
+          Afro-Asian
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_Indigenous" value="1" class="   checkbox_group" data-always="false">
+          Indigenous
+        </label>
+        <label class="checkbox">
+        <input type="checkbox" name="Race_White" value="1" class="  checkbox_group" data-always="false">
+          White
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="Race_Other" value="1" class=" checkbox_group" data-always="false">
+          Other
+        </label>
+      </div>
+    </div>
+  </div>
+
+  {% include country.html %}
+
+  <div>
+    <label>
+      <input type="checkbox" name="I am a veteran of the armed forces_I am a veteran of the armed forces" value="1" class=" checkbox_group" data-always="false">
+      I am a veteran of the armed forces
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <input type="checkbox" name="I am a veteran of the armed forces_I am a veteran of the armed forces" value="1" class=" checkbox_group" data-always="false">
+      Opt in to mobile messages from Election Defenders. Message and data rates apply. Reply STOP to unsubscribe.
+    </label>
+  </div>
+
+  <input type="submit" class="submit-button" value="send">
+  <script>
+    $('.cb-form .dropdown').slideUp();
+    $('.cb-form .select-race').on('click', function(){
+      $('.cb-form .dropdown').slideToggle();
+    });
+  </script>
+</form>
