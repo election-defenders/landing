@@ -154,29 +154,40 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
                           }
                       })();
                       function dropdownInit(element, box) {
-                        console.log(element);
                         element.addClass('cb-dropdown');
                         let selectorElementString = "<div class='select-race'>Select Race(s)</div>";
                         element.append(selectorElementString);
 
-                        $('.select-race').on('click', function() {
+                        // Closing dropdown clicking outside of it
+                        $('#pledge').on('click', function() {
+                          $(box).slideUp();
+                        })
+
+                        // Toggling dropdown clicking on the selector
+                        $('.select-race').on('click', function(event) {
                           $(box).slideToggle();
                           $('.select-race').toggleClass('open');
+                          event.stopPropagation();
                         });
-                        $('.cb-dropdown label.checkbox').on('click', function(e) {
-                          console.log('here');
+
+                        // Selecting races
+                        $('.cb-dropdown label.checkbox').on('click', function(event) {
                           var racesCount = 0;
                           $('.cb-dropdown .checkbox input').each(function() {
                             if ($(this).is(":checked")) {
                               racesCount += 1;
                             };
                           });
-                          console.log(racesCount);
                           if (racesCount > 0) {
                             $('.select-race').text(racesCount + ' selected');
                           } else {
                             $('.select-race').text('Select Race(s)');
                           }
+                          event.stopPropagation();
+                        });
+                        // Preventing closing the dropdown by clicking on the bounding box
+                        $('.cb-dropdown .controls.check_radio_field').on('click', function(event) {
+                          event.stopPropagation();
                         });
 
                         // Country selector fixes
@@ -209,9 +220,6 @@ metatext: "We’ll defend our communities, our rights, and our votes  before, du
     if (navigator.userAgent.indexOf("Firefox") != -1) {
       $('body').addClass('firefox');
     }
-    $('body #can_embed_form label.check_radio_label').on('click', function() {
-      console.log('here');
-    });
   </script>
    </body>
 </html>

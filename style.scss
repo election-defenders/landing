@@ -221,6 +221,7 @@ body.firefox {
 
 #can_embed_form .check_radio_field label {
   font-size: 12px;
+  padding: 10px;
   input {
     margin-right: 3px;
     position: relative;
@@ -296,7 +297,7 @@ body .cb-dropdown {
     background: black;
     border: 3px solid white;
     width: 100%;
-    padding: 10px 16px;
+    //padding: 10px 16px;
     z-index: 10;
     top: 63px;
     label {
